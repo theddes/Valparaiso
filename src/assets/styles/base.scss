@@ -1,0 +1,46 @@
+html {
+    background: $_color-light repeat;
+    color: $_color-dark;
+    font-family: $_font-family;
+    font-size: $_font-size;
+    word-spacing: $_spacing;
+    letter-spacing: $_tracking;
+    line-height: $_line-height;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+::selection {
+    background: $_color-cyan;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+a {
+    color: $_color-light;
+    text-decoration: none;
+    transition: color 0.2s;
+    &:visited {
+        color: $_color-light;
+    }
+    &:hover {
+        color: $_color-cyan;
+    }
+    &:active {
+        color: $_color-cyan;
+    }
+}
