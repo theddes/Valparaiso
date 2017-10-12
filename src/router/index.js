@@ -16,7 +16,7 @@ const router = new Router({
 
 // Global navigational guards and hooks
 router.beforeResolve((to, from, next) => {
-    document.title = `${config.app.name} - ${to.meta.title}`
+    document.title = `${config.site.name} - ${to.meta.title}`
     next()
 })
 

@@ -2,9 +2,10 @@ import Vue from 'vue'
 import api from './api'
 
 const config = {
-    app: {
+    site: {
         name: 'Valparaiso',
-        version: 1.0
+        version: 2.0,
+        mode: 2 // 0: under construction, 1: online/normal, 2: show under construction even in dev environment
     },
     api
 }

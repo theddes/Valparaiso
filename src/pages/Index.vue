@@ -1,14 +1,14 @@
 <template>
     <main role="main" id="index">
-        index
+        <valpo-logo />
     </main>
 </template>
 
 <script>
+    import ValpoLogo from '@/components/ValpoLogo'
+
     export default {
         name: 'Index',
-        mounted () {
-            console.log(this)
-        }
+        components: { ValpoLogo }
     }
 </script>
