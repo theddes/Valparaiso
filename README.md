@@ -36,7 +36,7 @@ Switch the site mode to `0` or `1` in _/src/config/index.js_!
 
 > **Styleguide**
 
-Adhere to the [official VueJS styleguide]((https://vuejs.org/v2/style-guide/))! Partially enforced by the linting configuration.
+Adhere to the [official VueJS styleguide](https://vuejs.org/v2/style-guide/)! Partially enforced by the linting configuration.
 
 > **Image optimization**
 
