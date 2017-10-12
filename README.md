@@ -19,7 +19,7 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
+# build and deploy to staging (new developers will first need to be added as collaborator to deploy to staging!)
 npm run build
 ```
 

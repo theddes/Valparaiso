@@ -3,8 +3,8 @@ import config from '@/config'
 import Index from '@/pages/Index'
 import Construction from '@/pages/Construction'
 
-const mode = config.site.mode
-const indexComponent = (mode && window.location.hostname !== 'localhost' || mode === 2) ?
+const uc = (config.site.mode && window.location.hostname !== 'localhost' || config.site.mode === 2)
+const indexComponent = uc ?
     Construction :
     Index
 
@@ -14,7 +14,7 @@ const routes = [
         name: 'Index',
         component: indexComponent,
         meta: {
-            title: ''
+            title: (uc) ? 'Under construction' : ''
         }
     }
 ]
