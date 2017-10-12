@@ -5,6 +5,7 @@ const config = {
     site: {
         name: 'Valparaiso',
         version: 2.0,
+        dev_url: 'valparaiso.surge.sh',
         mode: 2 // 0: under construction, 1: online/normal, 2: show under construction even in dev environment
     },
     api
