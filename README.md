@@ -6,6 +6,8 @@
 >
 > Additional core dependencies added: [`vuex`](https://github.com/vuejs/vuex) (state management), [`axios`](https://github.com/mzabriskie/axios) (http client), [`firebase`](https://www.npmjs.com/package/firebase) (Firebase Javascript SDK), [`vue-touch`](https://github.com/vuejs/vue-touch/tree/next) (Hammer.js wrapper for Vue.js), [`anime-js`](https://github.com/juliangarnier/anime) (JavaScript Animation Engine)
 
+### **Staging**
+
 [**valparaiso.surge.sh**](http://valparaiso.surge.sh) will be regularly updated to reflect the latest stage of development! 
 
 ### **NPM commands**
