@@ -5,8 +5,11 @@ const config = {
     site: {
         name: 'Valparaiso',
         version: 2.0,
-        dev_url: 'valparaiso.surge.sh',
-        mode: 0 // 0: under construction, 1: online/normal, 2: show under construction even in local/dev environment
+        mode: 1 // 0: under construction, 1: online/normal
+    },
+    data: {
+        preserve: 3, // days till data is expired
+        loadtime: 1500 // ms to show loader regardless of cache status
     },
     api
 }

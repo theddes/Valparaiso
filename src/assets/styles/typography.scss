@@ -8,8 +8,9 @@ h1 {
     font-weight: 500;
     letter-spacing: var(--spacing-small);
     margin-bottom: var(--tracking-large);
+    max-width: 1040px;
     padding: 0 var(--tracking-large);
-    width: 80%;
+    width: 100%;
 }
 
 h2 {
@@ -18,8 +19,9 @@ h2 {
     font-weight: 500;
     letter-spacing: var(--spacing-small);
     margin-bottom: var(--tracking-large);
+    max-width: 1040px;
     padding: 0 var(--tracking-large);
-    width: 80%;
+    width: 100%;
 }
 
 h3 {
@@ -28,8 +30,9 @@ h3 {
     font-weight: 500;
     letter-spacing: var(--spacing-small);
     margin-bottom: var(--tracking-large);
+    max-width: 1040px;
     padding: 0 var(--tracking-large);
-    width: 80%;
+    width: 100%;
 }
 
 h4 {
@@ -49,8 +52,9 @@ h5 {
 }
 
 p {
+    max-width: 1040px;
     padding: 0 var(--tracking-large) var(--tracking-large);
-    width: 80%;
+    width: 100%;
 }
 
 .align-center {

@@ -3,20 +3,28 @@ import config from '@/config'
 import Index from '@/pages/Index'
 import Construction from '@/pages/Construction'
 
-const uc = (config.site.mode && window.location.hostname !== 'localhost' || config.site.mode === 2)
-const indexComponent = uc ?
-    Construction :
-    Index
-
-const routes = [
+let routes = [
     {
         path: '/',
         name: 'Index',
-        component: indexComponent,
+        component: Index,
         meta: {
-            title: (uc) ? 'Under construction' : ''
+            title: ''
         }
     }
 ]
+
+if (!config.site.mode) {
+    routes = [
+        {
+            path: '*',
+            name: 'UnderConstruction',
+            component: Construction,
+            meta: {
+                title: 'Under construction'
+            }
+        }
+    ]
+}
 
 export default routes

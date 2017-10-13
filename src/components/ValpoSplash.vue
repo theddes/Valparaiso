@@ -31,7 +31,7 @@
         }
         .logo {
             margin-bottom: 2em;
-            max-width: 500px;
+            max-width: 400px;
             width: 90%;
         }
     }

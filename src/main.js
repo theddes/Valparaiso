@@ -6,6 +6,7 @@ import { sync } from 'vuex-router-sync'
 
 import './plugins'
 import './utils'
+import './directives'
 
 import config from './config'
 

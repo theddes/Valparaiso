@@ -1,8 +1,10 @@
 <template>
     <main role="main" id="index">
+
         <valpo-splash></valpo-splash>
-        <valpo-content class="intro flex-rows">
-            <h3 id="about">the Adventures of the Valparaiso</h3>
+
+        <valpo-content id="about" class="about flex-rows">
+            <h3>the Adventures of the Valparaiso</h3>
             <p>
                 Pirates are typically known for looting, raiding and wrecking wherever they went. However, did you know that pirates were also the revolutionaries, the progressives, the explorers? They challenged the existing authority, sailed away from mainstream society and created their own alternative culture and socio-economic structure.
             </p>
@@ -16,6 +18,7 @@
                 <valpo-button class="button cerulean shadow" label="Read more about us ..."></valpo-button>
             </p>
         </valpo-content>
+
         <valpo-content id="involved" class="involved flex-rows fixed-pseudo">
             <valpo-list class="icons flex-around">
                 <valpo-list-item v-for="(item, index) in involved" :key="item.icon">
@@ -30,6 +33,10 @@
             <p class="cta">
                 <valpo-button class="button robroy large shadow" label="Get involved!"></valpo-button>
             </p>
+        </valpo-content>
+
+        <valpo-content id="events" class="events flex-rows fixed-pseudo">
+            
         </valpo-content>
     </main>
 </template>
@@ -57,14 +64,18 @@
                 }
             ]
         })
+        // mounted () {
+        //     this.pagedata = JSON.parse(localStorage.getItem('valparaiso'))[this.$options.name.toLowerCase()]
+        // }
     }
 </script>
 
 <style lang="scss" scoped>
-    .intro {
+    .about {
         background: var(--color-light) url('../assets/images/graphic-boat.jpg') no-repeat right bottom;
         color: var(--color-ocean);
-        min-height: 60vh;
+        padding-top: calc(var(--tracking-large) * 5);
+        min-height: 65vh;
         p {
             background: rgba(255, 255, 255, 0.8);
             text-align: left;
@@ -82,7 +93,7 @@
         text-align: center;
         .icons {
             margin: 0 auto;
-            margin-top: 70px;
+            margin-top: calc(var(--tracking-large) * 8);
             text-align: center;
             width: 60%;
             li {
@@ -101,19 +112,31 @@
             }
             &:hover li:not(:hover) {
                 opacity: 0.8;
+                filter: grayscale(80%);
             }
         }
         .slogan {
             margin-top: calc(80px - 2vw);
-            text-shadow: 1px 1px 1px var(--color-light);
+            text-shadow: 0px 0px 2px var(--color-light);
         }
         .cta {
-            margin-top: 80px;
+            margin-top: 50px;
         }
         &:before {
-            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(217,230,233,0) 15%,rgba(1,85,107,1) 100%);
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
             opacity: 0.5;
             z-index: 0;
+        }
+    }
+    .events {
+        background: var(--color-ocean);
+        color: var(--color-light);
+        min-height: 70vh;
+        &:before {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
+            height: 200px;
+            top: -180px;
+            z-index: 10;
         }
     }
 </style>
