@@ -25,6 +25,26 @@ npm run build
 
 For detailed explanation on how the Webpack template works, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+### **Releases / Roadmap**
+
+- **`Version 2.0 - Initial release`**
+	- **October 2017**
+		+ Initial release of the new website
+- **`Version 2.1 - First iteration`**
+	- **November 2017**
+	- Tweak and expand initial release
+		+ layout optimizations
+		+ transitions
+		+ animations
+<!-- - **`Version 2.2 - Blog`**
+	- **December/January 2017**
+	- Introduce blog
+		+ 1.0 version of blog
+- **`Version 2.3 - PWA`**
+	- **January/February 2017**
+	- Convert site to a Progressive Web App
+	- Expand and tweak blog features -->
+
 ---
 ## **Additional info, hints and tips:**
 
