@@ -36,6 +36,7 @@ For detailed explanation on how the Webpack template works, checkout the [guide]
 		+ layout optimizations
 		+ transitions
 		+ animations
+		+ copy changes
 <!-- - **`Version 2.2 - Blog`**
 	- **December/January 2017**
 	- Introduce blog
@@ -43,7 +44,11 @@ For detailed explanation on how the Webpack template works, checkout the [guide]
 - **`Version 2.3 - PWA`**
 	- **January/February 2017**
 	- Convert site to a Progressive Web App
-	- Expand and tweak blog features -->
+	- Expand and tweak blog features
+- **`Version 2.5 - CMS`**
+	- **April 2017**
+	- Introduce a Content Management System
+		+ Initial release of custom CMS -->
 
 ---
 ## **Additional info, hints and tips:**

@@ -20,6 +20,13 @@
     }
 }
 
+.flex-around {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .flex-center {
     align-items: center;
     flex-wrap: wrap;
@@ -41,6 +48,7 @@
 }
 
 .fixed-pseudo {
+    position: relative;
     &:before, &:after {
         content: '';
         height: 100%;

@@ -1,39 +1,76 @@
 .button {
+    font-family: "Yantramanav", sans-serif;
+    font-size: 1.25em;
+    font-weight: 400;
     outline: none;
     padding: 0.8rem 1rem 0.8rem 2rem;
     position: relative;
-    transition: padding 0.3s ease-out;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease-out;
     span {
         position: relative;
         z-index: 5;
     }
-    &:before {
-        background: var(--color-ocean);
+    &:before, &:after {
         content: '';
         height: 100%;
         left: 0;
         position: absolute;
         top: 0;
-        transition: width 0.3s ease-out;
+        transition: all 0.4s ease-out;
         width: 1rem;
         z-index: 1;
     }
+    &:after {
+        width: 100%;
+        opacity: 0;
+    }
     &:hover {
-        padding-left: 1.8rem;
-        &:before {
-            width: 0.8rem;
+        &:after {
+            opacity: 0.3;
         }
     }
     &:active {
-        padding-left: 1.7rem;
+        padding-left: 1.85rem;
         transition: padding 0.1s ease-in;
         &:before {
             transition: width 0.1s ease-in;
-            width: 0.7rem;
+            width: 0.85rem;
+        }
+        &:after {
+            opacity: 0.1;
         }
     }
+
+    // Modifiers
     &.cerulean {
         background: var(--color-cerulean);
         color: var(--color-light);
+        &:before, &:after {
+            background: var(--color-ocean);
+        }
+    }
+    &.robroy {
+        background: var(--color-robroy);
+        color: var(--color-light);
+        &:before, &:after {
+            background: var(--color-terracota);
+        }
+    }
+    &.large {
+        font-size: 1.6em;
+        font-weight: 400;
+        outline: none;
+        padding: 0.8rem 1rem 0.7rem 2rem;
+        letter-spacing: 0.05em;
+    }
+    &.shadow {
+        box-shadow: 0px 3px 7px rgba(1,85,107,0.16), 3px 0px 5px rgba(1,85,107,0.23);
+        &:hover {
+            box-shadow: 0px 3px 10px rgba(1,85,107,0.16), 3px 0px 8px rgba(1,85,107,0.23);
+        }
+        &:active {
+            box-shadow: 0px 1px 10px rgba(1,85,107,0.16), 1px 0px 8px rgba(1,85,107,0.23);
+        }
     }
 }
