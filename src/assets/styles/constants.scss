@@ -1,18 +1,22 @@
-$_font-family: 'Nunito', Helvetica, Arial, sans-serif;
-$_font-size: 15px;
+:root {
+    --font-family: 'Asap', Helvetica, Arial, sans-serif;
+    --font-size: 16px;
 
-$_spacing: 0rem;
-$_line-height: 1.4;
-$_tracking: 0rem;
-$_tracking-medium: 0.5rem;
-$_tracking-large: 0.8rem;
+    --wrapper-width: 1366px;
 
-$_color-light: #FCFEFE;
-$_color-dark: #000;
+    --spacing: 0rem;
+    --line-height: 1.5;
+    --tracking: 0rem;
+    --tracking-medium: 0.5rem;
+    --tracking-large: 0.8rem;
 
-$_color-cyan: #e4fdff;
-$_color-cerulean: #00b1bd;
-$_color-ocean: #006387;
-$_color-lagoon: #046287;
-$_color-terracota: #dc6f2d;
-$_color-robroy: #dda858;
+    --color-light: #FCFEFE;
+    --color-dark: #000;
+
+    --color-cyan: #e4fdff;
+    --color-cerulean: #00b1bd;
+    --color-ocean: #006387;
+    --color-lagoon: #046287;
+    --color-terracota: #dc6f2d;
+    --color-robroy: #dda858;
+}

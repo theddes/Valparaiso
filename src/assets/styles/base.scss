@@ -1,21 +1,33 @@
 html {
-    background: $_color-lagoon repeat;
-    color: $_color-light;
-    font-family: $_font-family;
-    font-size: $_font-size;
-    word-spacing: $_spacing;
-    letter-spacing: $_tracking;
-    line-height: $_line-height;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
+    -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    background: #d0dde2 url('assets/images/pattern-topo.png') repeat;
     box-sizing: border-box;
+    color: var(--color-light);
     cursor: default;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    letter-spacing: var(--tracking);
+    line-height: var(--line-height);
+    position: relative;
+    word-spacing: var(--spacing);
+    &:before {
+        background: rgba(1, 85, 107, 0.2);
+        content: '';
+        height: 100%;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
 }
 
 ::selection {
-    background: $_color-cyan;
+    background: var(--color-cyan);
 }
 
 *,
@@ -31,16 +43,16 @@ main {
 }
 
 a {
-    color: $_color-light;
+    color: var(--color-light);
     text-decoration: none;
     transition: color 0.2s;
     &:visited {
-        color: $_color-light;
+        color: var(--color-light);
     }
     &:hover {
-        color: $_color-cyan;
+        color: var(--color-cyan);
     }
     &:active {
-        color: $_color-cyan;
+        color: var(--color-cyan);
     }
 }

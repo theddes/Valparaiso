@@ -3,32 +3,52 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
+    font-family: 'Yantramanav';
     font-size: 2.4em;
     font-weight: 700;
     letter-spacing: 0.2em;
-    margin-bottom: 25px;
+    margin-bottom: var(--tracking-large);
+    padding: 0 var(--tracking-large);
+    width: 80%;
 }
 
 h2 {
+    font-family: 'Yantramanav';
     font-size: 2.2em;
     font-weight: 700;
     letter-spacing: 0.2em;
-    margin-bottom: 25px;
+    margin-bottom: var(--tracking-large);
+    padding: 0 var(--tracking-large);
+    width: 80%;
 }
 
 h3 {
+    font-family: 'Yantramanav';
     font-size: 2em;
     font-weight: 700;
     letter-spacing: 0.2em;
-    margin-bottom: 25px;
+    margin-bottom: var(--tracking-large);
+    padding: 0 var(--tracking-large);
+    width: 80%;
 }
 
 h4 {
+    font-family: 'Yantramanav';
     font-size: 1.8em;
     font-weight: 600;
 }
 
 h5 {
+    font-family: 'Yantramanav';
     font-size: 1.6em;
     font-weight: 500;
+}
+
+p {
+    padding: 0 var(--tracking-large) var(--tracking-large);
+    width: 80%;
+}
+
+.align-center {
+    text-align: center;
 }

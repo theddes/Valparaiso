@@ -1,7 +1,7 @@
 <template>
-    <main role="main" id="uc">
+    <main role="main" id="uc" class="fixed-pseudo fullwidth">
         <section class="float-center">
-            <valpo-logo class="logo" />
+            <valpo-logo class="logo"></valpo-logo>
             <p>
                 We're currently under construction.
             </p>
@@ -21,14 +21,6 @@
 <style lang="scss" scoped>
     #uc {
         position: relative;
-        &:before, &:after {
-            content: '';
-            height: 100%;
-            left: 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
         &:before {
             background: url('../assets/images/image-boat.jpg') no-repeat center;
             background-size: cover;

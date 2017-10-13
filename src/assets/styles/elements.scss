@@ -1,1 +1,39 @@
-
+.button {
+    outline: none;
+    padding: 0.8rem 1rem 0.8rem 2rem;
+    position: relative;
+    transition: padding 0.3s ease-out;
+    span {
+        position: relative;
+        z-index: 5;
+    }
+    &:before {
+        background: var(--color-ocean);
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: width 0.3s ease-out;
+        width: 1rem;
+        z-index: 1;
+    }
+    &:hover {
+        padding-left: 1.8rem;
+        &:before {
+            width: 0.8rem;
+        }
+    }
+    &:active {
+        padding-left: 1.7rem;
+        transition: padding 0.1s ease-in;
+        &:before {
+            transition: width 0.1s ease-in;
+            width: 0.7rem;
+        }
+    }
+    &.cerulean {
+        background: var(--color-cerulean);
+        color: var(--color-light);
+    }
+}
