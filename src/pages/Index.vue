@@ -36,7 +36,12 @@
         </valpo-content>
 
         <valpo-content id="events" class="events flex-rows fixed-pseudo">
-            
+            <h3 class="slogan">
+                Events and festivals
+            </h3>
+            <p>
+                We are determined, with support from our homebase in the Netherlands, to equip a larger and seaworthy ship for an international journey of art, sustainability, connection, education, and technological innovation. This all comes together to promote an alternative and people-centric way of trading. One that we call <strong>the New Pirate Economy</strong>.
+            </p>
         </valpo-content>
     </main>
 </template>
@@ -132,6 +137,8 @@
         background: var(--color-ocean);
         color: var(--color-light);
         min-height: 70vh;
+        padding-top: calc(var(--tracking-large) * 5);
+        text-align: center;
         &:before {
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
             height: 200px;
