@@ -1,2 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Asap:400,400i,500,500i,600,600i');
-@import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Kalam:400,700');
+
+@font-face {
+	font-family: 'BentonSans Cond';
+	src: url('assets/fonts/BentonSansCond-Regular.woff2') format('woff2'),
+		url('assets/fonts/BentonSansCond-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BentonSans';
+	src: url('assets/fonts/BentonSans-Regular.woff2') format('woff2'),
+		url('assets/fonts/BentonSans-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BentonSans Cond';
+	src: url('assets/fonts/BentonSansCond-Medium.woff2') format('woff2'),
+		url('assets/fonts/BentonSansCond-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BentonSans Cond';
+	src: url('assets/fonts/BentonSansCond-Light.woff2') format('woff2'),
+		url('assets/fonts/BentonSansCond-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BentonSans';
+	src: url('assets/fonts/BentonSans-Light.woff2') format('woff2'),
+		url('assets/fonts/BentonSans-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}

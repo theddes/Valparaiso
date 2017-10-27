@@ -1,53 +1,50 @@
 h1, h2, h3, h4, h5 {
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 
 h1 {
-    font-family: 'Yantramanav';
+    font-family: 'BentonSans Cond';
     font-size: 2.4em;
     font-weight: 500;
     letter-spacing: var(--spacing-small);
     margin-bottom: var(--tracking-large);
     max-width: 1040px;
     padding: 0 var(--tracking-large);
-    text-transform: uppercase;
     width: 100%;
 }
 
 h2 {
-    font-family: 'Yantramanav';
+    font-family: 'BentonSans Cond';
     font-size: 2.2em;
     font-weight: 500;
     letter-spacing: var(--spacing-small);
     margin-bottom: var(--tracking-large);
     max-width: 1040px;
     padding: 0 var(--tracking-large);
-    text-transform: uppercase;
     width: 100%;
 }
 
 h3 {
-    font-family: 'Yantramanav';
+    font-family: 'BentonSans Cond';
     font-size: 2em;
     font-weight: 500;
     letter-spacing: var(--spacing-small);
     margin-bottom: var(--tracking-large);
     max-width: 1040px;
     padding: 0 var(--tracking-large);
-    text-transform: uppercase;
     width: 100%;
 }
 
 h4 {
-    font-family: 'Yantramanav';
+    font-family: 'BentonSans Cond';
     font-size: 1.8em;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: var(--spacing-small);
     text-transform: none;
 }
 
 h5 {
-    font-family: 'Yantramanav';
+    font-family: 'BentonSans Cond';
     font-size: 1.6em;
     font-weight: 400;
     letter-spacing: var(--spacing-small);
@@ -62,4 +59,8 @@ p {
 
 .align-center {
     text-align: center;
+}
+
+.align-right {
+    text-align: right;
 }
