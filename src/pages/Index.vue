@@ -4,7 +4,7 @@
         <valpo-splash></valpo-splash>
 
         <valpo-content id="about" class="about flex-rows">
-            <h3>the Adventures of the Valparaiso</h3>
+            <h3>Adventures of the Valparaíso</h3>
             <p>
                 Pirates are typically known for looting, raiding and wrecking wherever they went. However, did you know that pirates were also the revolutionaries, the progressives, the explorers? They challenged the existing authority, sailed away from mainstream society and created their own alternative culture and socio-economic structure.
             </p>
@@ -15,7 +15,7 @@
                 To us, this is the real essence of piracy: the courage to branch out from established societal norms to explore and create progressive, and exciting pathways.
             </p>
             <p class="cta">
-                <valpo-button class="button cerulean shadow" label="Read more about us ..."></valpo-button>
+                <valpo-button class="button cerulean" label="Read more about us ..."></valpo-button>
             </p>
         </valpo-content>
 
@@ -23,15 +23,12 @@
             <valpo-list class="icons flex-around">
                 <valpo-list-item v-for="(item, index) in involved" :key="item.icon">
                     <figure>
-                        <img :src="item.icon">
+                        <img :src="item.icon" :alt="item.alt">
                     </figure>
                 </valpo-list-item>
             </valpo-list>
-            <h4 class="slogan">
-                A ship-based community working on new sustainable solutions
-            </h4>
             <p class="cta">
-                <valpo-button class="button robroy large shadow" label="Get involved!"></valpo-button>
+                <valpo-button class="button robroy large" label="Get involved!"></valpo-button>
             </p>
         </valpo-content>
 
@@ -42,6 +39,59 @@
             <p>
                 We are determined, with support from our homebase in the Netherlands, to equip a larger and seaworthy ship for an international journey of art, sustainability, connection, education, and technological innovation. This all comes together to promote an alternative and people-centric way of trading. One that we call <strong>the New Pirate Economy</strong>.
             </p>
+            <ul class="events-list">
+                <li class="event">
+                    <h4 class="event-title">
+                        First-aid Empathy
+                        <span class="event-date">November 1, 2017</span>
+                    </h4>
+                    <figure class="event-figure">
+                        <span class="event-image-wrapper">
+                            <img class="event-image" src="../assets/images/image-event01.jpg" alt="First-aid Empathy, November 1, 2017">
+                        </span>
+                        <figcaption class="event-text">
+                            A lot of people struggle giving support when a friend is in pain, most would try to comfort their friend by giving advice or telling something about an experience they themselves once had. Advice, sympathy, pity and many more ways we choose to comfort our loved ones are not always the best way to bring comfort to our friends and help them mourn.<br><br>
+                            <p class="align-right">
+                                <valpo-button class="button robroy small" url="https://www.facebook.com/events/1424126381016071" label="Join this event"></valpo-button>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="event">
+                    <h4 class="event-title">
+                        Delicious dumpster dinner
+                        <span class="event-date">November 3, 2017</span>
+                    </h4>
+                    <figure class="event-figure">
+                        <span class="event-image-wrapper">
+                            <img class="event-image" src="../assets/images/image-event02.jpg" alt="Delicious dumpster dinner, November 3, 2017">
+                        </span>
+                        <figcaption class="event-text">
+                            Let's have a lovely dinner at our lovely boat. Just an evening where we come together and celebrate our community.<br><br>
+                            <p class="align-right">
+                                <valpo-button class="button robroy small" url="https://www.facebook.com/events/1315747708551348" label="Join this event"></valpo-button>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="event">
+                    <h4 class="event-title">
+                        Captain's Maritime
+                        <span class="event-date">November 17, 2017</span>
+                    </h4>
+                    <figure class="event-figure">
+                        <span class="event-image-wrapper">
+                            <img class="event-image" src="../assets/images/image-event03.jpg" alt="Captain's Maritime, November 17, 2017">
+                        </span>
+                        <figcaption class="event-text">
+                            The Captain invites you to come on board in Amsterdam Noord for chiling out, food, talks & inspiration. You'll get to know our project and share ideas to keep creating a collaborative, sustainable and happy community.<br><br>
+                            <p class="align-right">
+                                <valpo-button class="button robroy small" url="https://www.facebook.com/events/1085736448229563" label="Join this event"></valpo-button>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
         </valpo-content>
     </main>
 </template>
@@ -59,13 +109,16 @@
         data: () => ({
             involved: [
                 {
-                    icon: require('../assets/images/icon-boat.svg')
+                    icon: require('../assets/images/icon-boat.svg'),
+                    alt: 'Help us get our boat'
                 },
                 {
-                    icon: require('../assets/images/icon-connect.svg')
+                    icon: require('../assets/images/icon-connect.svg'),
+                    alt: 'Connect with us'
                 },
                 {
-                    icon: require('../assets/images/icon-globe.svg')
+                    icon: require('../assets/images/icon-globe.svg'),
+                    alt: 'I dunno, something with a globe'
                 }
             ]
         })
@@ -98,7 +151,7 @@
         text-align: center;
         .icons {
             margin: 0 auto;
-            margin-top: calc(var(--tracking-large) * 8);
+            margin-top: calc(var(--tracking-large) * 10);
             text-align: center;
             width: 60%;
             li {
@@ -106,8 +159,8 @@
                 display: inline-block;
                 height: 120px;
                 list-style-type: none;
-                margin: 2vw;
-                max-width: 130px;
+                margin: 2.5vw;
+                max-width: 160px;
                 position: relative;
                 transition: all 0.3s ease-out;
                 width: 25vw;
@@ -120,12 +173,8 @@
                 filter: grayscale(80%);
             }
         }
-        .slogan {
-            margin-top: calc(80px - 2vw);
-            text-shadow: 0px 0px 2px var(--color-light);
-        }
         .cta {
-            margin-top: 50px;
+            margin-top: 70px;
         }
         &:before {
             background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
@@ -141,9 +190,69 @@
         text-align: center;
         &:before {
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
-            height: 200px;
-            top: -180px;
+            height: 100px;
+            top: -100px;
             z-index: 10;
+        }
+        .events-list {
+            margin-top: calc(var(--tracking-large) * 5);
+            .event {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 3px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                list-style-type: none;
+                margin-bottom: calc(var(--tracking-large) * 2);
+                max-width: 800px;
+                position: relative;
+                text-align: left;
+                transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                .event-date {
+                    background: var(--color-robroy);
+                    border-top-right-radius: 3px;
+                    color: var(--color-light);
+                    font-family: 'BentonSans';
+                    font-size: 0.9rem;
+                    letter-spacing: initial;
+                    padding: 0.53em 0.7em;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+                }
+                .event-title {
+                    background: rgba(255, 255, 255, 0.9);
+                    border-top-left-radius: 3px;
+                    border-top-right-radius: 3px;
+                    color: var(--color-ocean);
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    left: 0;
+                    letter-spacing: 1px;
+                    overflow: hidden;
+                    padding: 0.15em 1em 0.1em 1em;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    z-index: 1;
+                }
+                .event-figure {
+                    .event-image-wrapper {
+                        display: block;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 200px;
+                        position: relative;
+                    }
+                    .event-image {
+                        width: 100%;
+                        margin-top: 2em;
+                    }
+                }
+                .event-text {
+                    padding: 1em;
+                    margin-top: 0.4em;
+                }
+            }
         }
     }
 </style>
