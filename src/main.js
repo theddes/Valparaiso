@@ -15,7 +15,7 @@ sync(store, router)
 Vue.config.productionTip = false
 
 new Vue({
-    el: '#app',
+    el: '#site',
     name: config.site.name,
     store, router,
     render: h => h(App)
