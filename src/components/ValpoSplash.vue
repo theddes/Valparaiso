@@ -1,5 +1,5 @@
 <template>
-    <section class="splash fixed-pseudo flex-container flex-center">
+    <section class="splash fixed-pseudo flex-container flex-center" v-lazy:background-image="require('../assets/images/image-pig.jpg')">
         <valpo-logo class="logo" />
     </section>
 </template>
@@ -22,10 +22,9 @@
         position: relative;
         text-align: center;
         width: 100vw;
-        &:before {
-            background: url('../assets/images/image-pig.jpg') no-repeat center;
-            background-size: cover;
-        }
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         &:after {
             background: rgba(1, 85, 107, 0.2);
         }

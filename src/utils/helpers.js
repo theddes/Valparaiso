@@ -1,3 +1,5 @@
+import 'intersection-observer'
+
 /**
 * Async await wrapper for easier error handling
 */

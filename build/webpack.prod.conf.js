@@ -9,6 +9,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
+var CriticalPlugin = require('webpack-plugin-critical').CriticalPlugin
+
 var env = config.build.env
 
 var webpackConfig = merge(baseWebpackConfig, {
@@ -92,7 +94,13 @@ var webpackConfig = merge(baseWebpackConfig, {
                 to: config.build.assetsSubDirectory,
                 ignore: ['.*']
             }
-        ])
+        ]),
+        new CriticalPlugin({
+            src: 'index.html',
+            inline: true,
+            minify: true,
+            dest: 'index.html'
+        })
     ]
 })
 
