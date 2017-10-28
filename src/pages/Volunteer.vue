@@ -2,7 +2,8 @@
     <main role="main" id="index">
 
         <valpo-splash class="splash" :video="video" :image="require('../assets/images/image-giuliana.jpg')">
-            <valpo-logo class="logo" />
+            <valpo-logo class="logo" /><br>
+            ~ we like acid yay ~
         </valpo-splash>
 
         <valpo-content id="volunteer" class="volunteer flex-rows align-center">
@@ -77,7 +78,6 @@
 <style lang="scss" scoped>
     .splash {
         .logo {
-            margin-bottom: 2em;
             max-width: 400px;
             width: 90%;
         }
@@ -91,22 +91,34 @@
             max-width: 740px;
             text-align: center;
             width: 100%;
-            @media (max-width: 460px) {
-                margin-top: calc(var(--tracking-large) * 5);
-            }
             li {
                 -webkit-tap-highlight-color: transparent;
                 cursor: pointer;
                 display: inline-block;
-                height: 120px;
                 list-style-type: none;
-                margin: 2.5vw;
+                margin: 1.8em 2.5vw;
                 max-width: 160px;
                 position: relative;
                 transition: all 0.3s ease-out;
+                vertical-align: top;
                 width: 20vw;
+                figure {
+                    height: auto;
+                    figcaption {
+                        margin-top: 0.5em;
+                    }
+                }
                 &:hover {
                     transform: scale(1.08);
+                }
+                @media (max-width: 550px) {
+                    margin: 0;
+                    max-width: 100%;
+                    width: 100%;
+                    figure {
+                        margin: 1.5em auto;
+                        max-width: 160px;
+                    }
                 }
             }
             &:hover li:not(:hover) {

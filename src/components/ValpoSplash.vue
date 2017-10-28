@@ -1,7 +1,9 @@
 // todo: add youtube support
 <template>
     <section class="splash fixed-pseudo flex-container flex-center" v-lazy:background-image="image">
-        <slot></slot>
+        <div class="splash-slot">
+            <slot></slot>
+        </div>
         <video autoplay :loop="video.loop" v-if="video">
             <source :src="video.src" :type="`video/${video.src.split('.').pop()}`">
         </video>
@@ -46,6 +48,11 @@
             position: absolute;
             top: 0;
             z-index: 10;
+        }
+        .splash-slot {
+            position: relative;
+            width: 100%;
+            z-index: 15;
         }
     }
 </style>

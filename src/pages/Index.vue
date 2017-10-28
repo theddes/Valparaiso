@@ -30,7 +30,7 @@
                 </valpo-list-item>
             </valpo-list>
             <p class="cta">
-                <router-link :to="{ path: 'volunteer' }">
+                <router-link :to="{ name: 'Volunteer', params: { focus: 'volunteer' }}">
                     <valpo-button class="button robroy large" label="Get involved!"></valpo-button>
                 </router-link>
             </p>
@@ -90,7 +90,6 @@
 <style lang="scss" scoped>
     .splash {
         .logo {
-            margin-bottom: 2em;
             max-width: 400px;
             width: 90%;
         }
@@ -140,12 +139,12 @@
                 -webkit-tap-highlight-color: transparent;
                 cursor: pointer;
                 display: inline-block;
-                height: 120px;
                 list-style-type: none;
                 margin: 2.5vw;
                 max-width: 160px;
                 position: relative;
                 transition: all 0.3s ease-out;
+                vertical-align: top;
                 width: 20vw;
                 &:hover {
                     transform: scale(1.08);
