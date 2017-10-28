@@ -1,7 +1,7 @@
 <template>
     <main role="main" id="uc" class="fixed-pseudo fullwidth">
         <section class="float-center">
-            <valpo-logo class="logo"></valpo-logo>
+            <img v-lazy="require('../assets/images/logo-valparaiso.svg')" class="logo" />
             <p>
                 We're currently under construction.
             </p>

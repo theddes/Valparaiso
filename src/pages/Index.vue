@@ -2,7 +2,7 @@
     <main role="main" id="index">
 
         <valpo-splash class="splash" :image="require('../assets/images/image-pig.jpg')">
-            <valpo-logo class="logo" />
+            <img v-lazy="require('../assets/images/logo-valparaiso.svg')" class="logo" />
         </valpo-splash>
 
         <valpo-content id="about" class="about flex-rows" v-lazy:background-image="require('../assets/images/graphic-boat.jpg')">

@@ -8,7 +8,7 @@
         </p>
         <p class="align-center">
             Join us on our journey!<br>
-            <valpo-logo class="logo"></valpo-logo>
+            <img v-lazy="require('../assets/images/logo-valparaiso.svg')" class="logo" />
         </p>
         <p class="align-center">
             Partners:

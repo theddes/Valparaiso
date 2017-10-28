@@ -2,7 +2,7 @@
     <main role="main" id="index">
 
         <valpo-splash class="splash" :video="video" :image="require('../assets/images/image-giuliana.jpg')">
-            <valpo-logo class="logo" /><br>
+            <img v-lazy="require('../assets/images/logo-valparaiso.svg')" class="logo" /><br>
             ~ we like acid yay ~
         </valpo-splash>
 
@@ -21,7 +21,7 @@
                     </figure>
                 </valpo-list-item>
             </valpo-list>
-            <h3 class="projects">
+            <h3 id="projects" class="projects">
                 Current projects
             </h3>
             <p>
