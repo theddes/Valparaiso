@@ -1,52 +1,20 @@
 <template>
     <ul class="events-list">
-        <li class="event">
+        <li class="event" v-for="(event, index) in events" :key="index">
             <h4 class="event-title">
-                First-aid Empathy
-                <span class="event-date">November 1, 2017</span>
+                {{ event.title }}
+                <span class="event-date">
+                    {{ event.date }}
+                </span>
             </h4>
             <figure class="event-figure">
                 <span class="event-image-wrapper">
-                    <img class="event-image" v-lazy="require('../assets/images/image-event01.jpg')" alt="First-aid Empathy, November 1, 2017">
+                    <img class="event-image" v-lazy="event.image" :alt="`${event.title}, ${event.date}`">
                 </span>
                 <figcaption class="event-text">
-                    A lot of people struggle giving support when a friend is in pain, most would try to comfort their friend by giving advice or telling something about an experience they themselves once had. Advice, sympathy, pity and many more ways we choose to comfort our loved ones are not always the best way to bring comfort to our friends and help them mourn.<br><br>
-                    <p class="align-right">
-                        <valpo-button class="button robroy small" url="https://www.facebook.com/events/1424126381016071" label="Join this event"></valpo-button>
-                    </p>
-                </figcaption>
-            </figure>
-        </li>
-        <li class="event">
-            <h4 class="event-title">
-                Delicious dumpster dinner
-                <span class="event-date">November 3, 2017</span>
-            </h4>
-            <figure class="event-figure">
-                <span class="event-image-wrapper">
-                    <img class="event-image" v-lazy="require('../assets/images/image-event02.jpg')" alt="Delicious dumpster dinner, November 3, 2017">
-                </span>
-                <figcaption class="event-text">
-                    Let's have a lovely dinner at our lovely boat. Just an evening where we come together and celebrate our community.<br><br>
-                    <p class="align-right">
-                        <valpo-button class="button robroy small" url="https://www.facebook.com/events/1315747708551348" label="Join this event"></valpo-button>
-                    </p>
-                </figcaption>
-            </figure>
-        </li>
-        <li class="event">
-            <h4 class="event-title">
-                Captain's Maritime
-                <span class="event-date">November 17, 2017</span>
-            </h4>
-            <figure class="event-figure">
-                <span class="event-image-wrapper">
-                    <img class="event-image" v-lazy="require('../assets/images/image-event03.jpg')" alt="Captain's Maritime, November 17, 2017">
-                </span>
-                <figcaption class="event-text">
-                    The Captain invites you to come on board in Amsterdam Noord for chiling out, food, talks & inspiration. You'll get to know our project and share ideas to keep creating a collaborative, sustainable and happy community.<br><br>
-                    <p class="align-right">
-                        <valpo-button class="button robroy small" url="https://www.facebook.com/events/1085736448229563" label="Join this event"></valpo-button>
+                    {{ event.body }}<br><br>
+                    <p class="event-cta align-right">
+                        <valpo-button class="button robroy small" :url="event.url" :label="`Join this ${event.type}`" target="_blank"></valpo-button>
                     </p>
                 </figcaption>
             </figure>
@@ -60,6 +28,34 @@
     export default {
         name: 'Events',
         components: { ValpoButton },
+        data: () => ({
+            events: [
+                {
+                    title: 'First-aid Empathy',
+                    date: 'November 1, 2017',
+                    type: 'workshop',
+                    image: require('../assets/images/image-event01.jpg'),
+                    body: 'A lot of people struggle giving support when a friend is in pain, most would try to comfort their friend by giving advice or telling something about an experience they themselves once had. Advice, sympathy, pity and many more ways we choose to comfort our loved ones are not always the best way to bring comfort to our friends and help them mourn.',
+                    url: 'https://www.facebook.com/events/1424126381016071'
+                },
+                {
+                    title: 'Delicious dumpster dinner',
+                    date: 'November 3, 2017',
+                    type: 'dinner',
+                    image: require('../assets/images/image-event02.jpg'),
+                    body: 'Let\'s have a lovely dinner at our lovely boat. Just an evening where we come together and celebrate our community.',
+                    url: 'https://www.facebook.com/events/1315747708551348'
+                },
+                {
+                    title: 'Captain\'s Maritime',
+                    date: 'November 17, 2017',
+                    type: 'event',
+                    image: require('../assets/images/image-event03.jpg'),
+                    body: 'The Captain invites you to come on board in Amsterdam Noord for chiling out, food, talks & inspiration. You\'ll get to know our project and share ideas to keep creating a collaborative, sustainable and happy community.',
+                    url: 'https://www.facebook.com/events/1085736448229563'
+                }
+            ]
+        })
     }
 </script>
 
@@ -76,6 +72,11 @@
             position: relative;
             text-align: left;
             transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            @media (max-width: 480px) {
+                button {
+                    width: 100%;
+                }
+            }
             .event-date {
                 background: var(--color-robroy);
                 border-top-right-radius: 3px;
@@ -88,6 +89,9 @@
                 right: 0;
                 top: 0;
                 z-index: 1;
+                @media (max-width: 480px) {
+                    display: none;
+                }
             }
             .event-title {
                 background: rgba(255, 255, 255, 0.9);
@@ -104,6 +108,11 @@
                 top: 0;
                 width: 100%;
                 z-index: 1;
+                @media (max-width: 480px) {
+                    font-size: 1.2rem;
+                    padding: 0.15em 1em 0.1em 0.5em;
+                    overflow: visible;
+                }
             }
             .event-figure {
                 .event-image-wrapper {
@@ -112,6 +121,9 @@
                     width: 100%;
                     height: 200px;
                     position: relative;
+                    @media (max-width: 480px) {
+                        height: 170px;
+                    }
                 }
                 .event-image {
                     width: 100%;
@@ -121,6 +133,9 @@
             .event-text {
                 padding: 1em;
                 margin-top: 0.4em;
+            }
+            .event-cta {
+                padding: 0;
             }
         }
     }

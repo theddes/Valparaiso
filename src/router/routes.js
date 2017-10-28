@@ -1,6 +1,8 @@
 import config from '@/config'
 
 import Index from '@/pages/Index'
+import Volunteer from '@/pages/Volunteer'
+
 import Construction from '@/pages/Construction'
 
 let routes = [
@@ -10,6 +12,15 @@ let routes = [
         component: Index,
         meta: {
             title: ''
+        }
+    },
+    {
+        path: '/become-a-volunteer',
+        alias: ['/volunteer', '/volunteering'],
+        name: 'Volunteer',
+        component: Volunteer,
+        meta: {
+            title: 'Become a volunteer'
         }
     }
 ]

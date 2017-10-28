@@ -1,37 +1,51 @@
+// todo: add youtube support
 <template>
-    <section class="splash fixed-pseudo flex-container flex-center" v-lazy:background-image="require('../assets/images/image-pig.jpg')">
-        <valpo-logo class="logo" />
+    <section class="splash fixed-pseudo flex-container flex-center" v-lazy:background-image="image">
+        <slot></slot>
+        <video autoplay :loop="video.loop" v-if="video">
+            <source :src="video.src" :type="`video/${video.src.split('.').pop()}`">
+        </video>
     </section>
 </template>
 
 <script>
-    import ValpoLogo from '@/components/ValpoLogo'
-
     export default {
         name: 'Splash',
-        components: { ValpoLogo }
+        props: {
+            video: {
+                type: Object,
+                required: false
+            },
+            image: {
+                type: String,
+                required: false,
+                default: ''
+            }
+        }
     }
 </script>
 
 <style lang="scss" scoped>
     .splash {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         flex-direction: column;
         height: 100vh;
         margin: 0 auto;
         max-width: var(--wrapper-width);
+        overflow: hidden;
         position: relative;
         text-align: center;
         width: 100vw;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         &:after {
             background: rgba(1, 85, 107, 0.2);
         }
-        .logo {
-            margin-bottom: 2em;
-            max-width: 400px;
-            width: 90%;
+        video {
+            left: 0;
+            position: absolute;
+            top: 0;
+            z-index: 10;
         }
     }
 </style>

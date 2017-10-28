@@ -1,6 +1,6 @@
 <template>
-    <section id="loading" class="loading fixed-pseudo fullwidth">
-        <valpo-logo class="logo"></valpo-logo>
+    <section id="gateway" class="fixed-pseudo fullwidth">
+
     </section>
 </template>
 
@@ -8,32 +8,13 @@
     import ValpoLogo from '@/components/ValpoLogo'
 
     export default {
-        name: 'Loading',
+        name: 'Gateway',
         components: { ValpoLogo }
-        // data: () => ({
-        //     online: navigator.onLine,
-        //     events: {
-        //         online: null,
-        //         offline: null
-        //     }
-        // }),
-        // mounted () {
-        //     this.events.online = window.addEventListener('online', event => {
-        //         this.online = true
-        //     })
-        //     this.events.offline = window.addEventListener('offline', event => {
-        //         this.online = false
-        //     })
-        // },
-        // beforeDestroy () {
-        //     window.removeEventListener('online', this.events.online)
-        //     window.removeEventListener('offline', this.events.offline)
-        // }
     }
 </script>
 
 <style lang="scss" scoped>
-    #loading {
+    #gateway {
         align-items: center;
         display: flex;
         flex-direction: column;

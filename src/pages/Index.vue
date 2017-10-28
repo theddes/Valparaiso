@@ -1,7 +1,9 @@
 <template>
     <main role="main" id="index">
 
-        <valpo-splash></valpo-splash>
+        <valpo-splash class="splash" :image="require('../assets/images/image-pig.jpg')">
+            <valpo-logo class="logo" />
+        </valpo-splash>
 
         <valpo-content id="about" class="about flex-rows" v-lazy:background-image="require('../assets/images/graphic-boat.jpg')">
             <h3>Adventures of the Valparaíso</h3>
@@ -28,13 +30,15 @@
                 </valpo-list-item>
             </valpo-list>
             <p class="cta">
-                <valpo-button class="button robroy large" label="Get involved!"></valpo-button>
+                <router-link :to="{ path: 'volunteer' }">
+                    <valpo-button class="button robroy large" label="Get involved!"></valpo-button>
+                </router-link>
             </p>
         </valpo-content>
 
         <valpo-content id="events" class="events flex-rows fixed-pseudo">
             <h3 class="slogan">
-                Events and festivals
+                Upcoming events
             </h3>
             <p>
                 We are determined, with support from our homebase in the Netherlands, to equip a larger and seaworthy ship for an international journey of art, sustainability, connection, education, and technological innovation. This all comes together to promote an alternative and people-centric way of trading. One that we call <strong>the New Pirate Economy</strong>.
@@ -46,6 +50,7 @@
 
 <script>
     import ValpoSplash from '@/components/ValpoSplash'
+    import ValpoLogo from '@/components/ValpoLogo'
     import ValpoContent from '@/components/ValpoContent'
     import ValpoButton from '@/components/ValpoButton'
     import ValpoList from '@/components/ValpoList'
@@ -54,7 +59,7 @@
 
     export default {
         name: 'Index',
-        components: { ValpoSplash, ValpoContent, ValpoButton, ValpoList, ValpoListItem, ValpoEvents },
+        components: { ValpoSplash, ValpoLogo, ValpoContent, ValpoButton, ValpoList, ValpoListItem, ValpoEvents },
         data: () => ({
             involved: [
                 {
@@ -70,7 +75,12 @@
                     alt: 'I dunno, something with a globe'
                 }
             ]
-        })
+        }),
+        mounted () {
+            // this.$Lazyload.$on('loaded', (listener) => {
+            //     console.table(this.$Lazyload.performance())
+            // })
+        }
         // mounted () {
         //     this.pagedata = JSON.parse(localStorage.getItem('valparaiso'))[this.$options.name.toLowerCase()]
         // }
@@ -78,6 +88,13 @@
 </script>
 
 <style lang="scss" scoped>
+    .splash {
+        .logo {
+            margin-bottom: 2em;
+            max-width: 400px;
+            width: 90%;
+        }
+    }
     .about {
         background-color: var(--color-light);
         background-repeat: no-repeat;
@@ -85,29 +102,42 @@
         color: var(--color-ocean);
         padding-top: calc(var(--tracking-large) * 5);
         min-height: 65vh;
+        @media (max-width: 460px) {
+            background-image: none !important;
+            padding-top: calc(var(--tracking-large) * 3);
+        }
         p {
             background: rgba(255, 255, 255, 0.8);
             text-align: left;
             &.cta {
                 background: none;
                 margin-top: calc(var(--tracking-large) * 5);
+                @media (max-width: 460px) {
+                    margin-top: calc(var(--tracking-large) * 2);
+                }
             }
         }
     }
     .involved {
-        background-color: var(--color-ocean);
+        background-color: var(--color-light);
         background-repeat: no-repeat;
         background-position: top center;
         background-size: cover;
         color: var(--color-ocean);
+        margin-top: -1px;
         min-height: 80vh;
         text-align: center;
         .icons {
             margin: 0 auto;
             margin-top: calc(var(--tracking-large) * 10);
+            max-width: 740px;
             text-align: center;
-            width: 60%;
+            width: 100%;
+            @media (max-width: 460px) {
+                margin-top: calc(var(--tracking-large) * 5);
+            }
             li {
+                -webkit-tap-highlight-color: transparent;
                 cursor: pointer;
                 display: inline-block;
                 height: 120px;
@@ -116,7 +146,7 @@
                 max-width: 160px;
                 position: relative;
                 transition: all 0.3s ease-out;
-                width: 25vw;
+                width: 20vw;
                 &:hover {
                     transform: scale(1.08);
                 }
@@ -128,6 +158,9 @@
         }
         .cta {
             margin-top: 70px;
+            @media (max-width: 460px) {
+                margin-top: 30px;
+            }
         }
         &:before {
             background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
@@ -138,13 +171,17 @@
     .events {
         background: var(--color-ocean);
         color: var(--color-light);
+        margin-top: -1px;
         min-height: 70vh;
         padding-top: calc(var(--tracking-large) * 5);
         text-align: center;
+        @media (max-width: 400px) {
+            padding-top: calc(var(--tracking-large) * 3);
+        }
         &:before {
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
             height: 100px;
-            top: -100px;
+            top: -99px;
             z-index: 10;
         }
     }
