@@ -9,7 +9,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
-var CriticalPlugin = require('webpack-plugin-critical').CriticalPlugin
+// var CriticalPlugin = require('webpack-plugin-critical').CriticalPlugin
+// var PrerenderSpaPlugin = require('prerender-spa-plugin')
+// var PrerenderRoutes = require('./prerender-routes').routes()
 
 var env = config.build.env
 
@@ -100,7 +102,13 @@ var webpackConfig = merge(baseWebpackConfig, {
         //     inline: true,
         //     minify: true,
         //     dest: 'index.html'
-        // })
+        // }),
+        // new PrerenderSpaPlugin(
+        //     // Absolute path to compiled SPA
+        //     config.build.assetsRoot,
+        //     // List of routes to prerender
+        //     PrerenderRoutes
+        // )
     ]
 })
 
