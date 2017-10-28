@@ -29,4 +29,4 @@ module.exports = {
         "vue/valid-v-if": "error",
         "no-console": 0
     }
-};
+}

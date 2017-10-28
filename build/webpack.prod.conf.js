@@ -95,12 +95,12 @@ var webpackConfig = merge(baseWebpackConfig, {
                 ignore: ['.*']
             }
         ]),
-        new CriticalPlugin({
-            src: 'index.html',
-            inline: true,
-            minify: true,
-            dest: 'index.html'
-        })
+        // new CriticalPlugin({
+        //     src: 'index.html',
+        //     inline: true,
+        //     minify: true,
+        //     dest: 'index.html'
+        // })
     ]
 })
 
