@@ -27,9 +27,21 @@
             <p>
                 We are determined, with support from our homebase in the Netherlands, to equip a larger and seaworthy ship for aninternational journey of art, sustainability, connection, education, and technological innovation. This all comes together to promote an alternative and people-centric way of trading. One that we call the New Pirate Economy.
             </p>
+            <valpo-list class="project-items flex-center">
+                <valpo-list-item v-for="(item, index) in projects" :key="item.icon">
+                    <figure>
+                        <img v-lazy="item.image" :alt="item.title">
+                        <figcaption>{{ item.title }}</figcaption>
+                    </figure>
+                </valpo-list-item>
+            </valpo-list>
         </valpo-content> 
         <valpo-content id="form" class="form flex-rows" v-lazy:background-image="require('../assets/images/image-beach.jpg')">
-
+            <h3>Send us a message</h3>
+            <form>
+                <label for="name">Name</label>
+                <input type="text">
+            </form>
         </valpo-content>
     </main>
 </template>
@@ -70,6 +82,20 @@
                     icon: require('../assets/images/icon-social.svg'),
                     alt: 'Social Media'
                 }
+            ],
+            projects: [
+                {
+                    image: require('../assets/images/image-light.jpg'),
+                    title: 'We\'re upgrading our ship!'
+                },
+                {
+                    image: require('../assets/images/image-qr.jpg'),
+                    title: 'The pirate app'
+                },
+                {
+                    image: require('../assets/images/image-birds.jpg'),
+                    title: 'Into the Woods festival'
+                }
             ]
         })
     }
@@ -84,6 +110,7 @@
     }
     .volunteer {
         background: linear-gradient(to bottom, var(--color-ocean) 0%,rgba(0,175,187,1) 100%);
+        padding-bottom: calc(var(--tracking-large) * 5);
         padding-top: calc(var(--tracking-large) * 5);
         .icons {
             margin: 0 auto;
@@ -92,24 +119,11 @@
             text-align: center;
             width: 100%;
             li {
-                -webkit-tap-highlight-color: transparent;
-                cursor: pointer;
-                display: inline-block;
-                list-style-type: none;
                 margin: 1.8em 2.5vw;
-                max-width: 160px;
-                position: relative;
-                transition: all 0.3s ease-out;
-                vertical-align: top;
+                margin-top: calc(var(--tracking-large) * 1);
                 width: 20vw;
-                figure {
-                    height: auto;
-                    figcaption {
-                        margin-top: 0.5em;
-                    }
-                }
-                &:hover {
-                    transform: scale(1.08);
+                @media (max-width: 800px) {
+                    margin-top: 0;
                 }
                 @media (max-width: 550px) {
                     margin: 0;
@@ -121,13 +135,42 @@
                     }
                 }
             }
-            &:hover li:not(:hover) {
-                opacity: 0.8;
-                filter: grayscale(80%);
-            }
         }
         .projects {
-            padding-top: calc(var(--tracking-large) * 6);
+            padding-top: calc(var(--tracking-large) * 5);
+        }
+        .project-items {
+            margin-top: calc(var(--tracking-large) * 2);
+            li {
+                margin-top: calc(var(--tracking-large) * 1);
+                figure {
+                    width: 100%;
+                    img {
+                        border: 2px solid var(--color-light);
+                        border-radius: 50%;
+                        max-height: 160px;
+                    }
+                    figcaption {
+                        font-family: 'BentonSans Cond';
+                        padding-top: 0;
+                    }
+                }
+                @media (max-width: 640px) {
+                    margin: 0;
+                    margin-bottom: 1em;
+                    max-width: 100%;
+                    width: 100%;
+                    figure {
+                        margin: 1.5em auto 0;
+                        max-width: 160px;
+                        figcaption {
+                            color: var(--color-light);
+                            margin-top: 0px;
+                            padding: 0.4em 1em 0.2em;
+                        }
+                    }
+                }
+            }
         }
     }
     .form {

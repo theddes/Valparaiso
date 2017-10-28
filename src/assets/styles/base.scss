@@ -3,7 +3,7 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    background: #d0dde2 url('assets/images/pattern-skulls.png') repeat;
+    background: #b5bfc4 url('assets/images/pattern-sym.png') repeat;
     box-sizing: border-box;
     color: var(--color-light);
     cursor: default;
@@ -24,7 +24,7 @@ html {
         z-index: -2;
     }
     &:before {
-        background: rgba(1, 85, 107, 0.2);
+        background: rgba(148, 146, 144, 0.4);
     }
     &:after {
         background: linear-gradient(to right, #016487 0%, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0) 85%, #016487 100%);
@@ -52,9 +52,9 @@ main {
 }
 
 a {
-    border-bottom: 1px solid;
     color: var(--color-light);
     cursor: pointer;
+    font-weight: 600;
     text-decoration: none;
     transition: color 0.2s;
     &:visited {

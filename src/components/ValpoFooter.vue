@@ -29,7 +29,13 @@
     .footer {
         background: var(--color-elephant);
         font-size: 0.9em;
+        margin: 0 auto;
+        max-width: var(--wrapper-width);
         min-height: 20vh;
+        padding-top: calc(var(--tracking-large) * 5);
+        padding: 2em;
+        position: relative;
+        width: 100%;
         @media (max-width: 680px) {
             flex-direction: column-reverse;
         }

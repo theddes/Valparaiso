@@ -75,12 +75,7 @@
                     alt: 'I dunno, something with a globe'
                 }
             ]
-        }),
-        mounted () {
-            // this.$Lazyload.$on('loaded', (listener) => {
-            //     console.table(this.$Lazyload.performance())
-            // })
-        }
+        })
         // mounted () {
         //     this.pagedata = JSON.parse(localStorage.getItem('valparaiso'))[this.$options.name.toLowerCase()]
         // }
@@ -99,11 +94,9 @@
         background-repeat: no-repeat;
         background-position: right bottom;
         color: var(--color-ocean);
-        padding-top: calc(var(--tracking-large) * 5);
         min-height: 65vh;
-        @media (max-width: 460px) {
+        @media (max-width: 800px) {
             background-image: none !important;
-            padding-top: calc(var(--tracking-large) * 3);
         }
         p {
             background: rgba(255, 255, 255, 0.8);
@@ -123,36 +116,19 @@
         background-position: top center;
         background-size: cover;
         color: var(--color-ocean);
-        margin-top: -1px;
         min-height: 80vh;
         text-align: center;
         .icons {
             margin: 0 auto;
-            margin-top: calc(var(--tracking-large) * 10);
+            margin-top: calc(var(--tracking-large) * 4);
             max-width: 740px;
             text-align: center;
             width: 100%;
-            @media (max-width: 460px) {
-                margin-top: calc(var(--tracking-large) * 5);
+            @media (max-width: 700px) {
+                margin-top: calc(var(--tracking-large) * 7);
             }
             li {
-                -webkit-tap-highlight-color: transparent;
-                cursor: pointer;
-                display: inline-block;
-                list-style-type: none;
-                margin: 2.5vw;
-                max-width: 160px;
-                position: relative;
-                transition: all 0.3s ease-out;
-                vertical-align: top;
                 width: 20vw;
-                &:hover {
-                    transform: scale(1.08);
-                }
-            }
-            &:hover li:not(:hover) {
-                opacity: 0.8;
-                filter: grayscale(80%);
             }
         }
         .cta {
@@ -170,18 +146,16 @@
     .events {
         background: var(--color-ocean);
         color: var(--color-light);
-        margin-top: -1px;
         min-height: 70vh;
-        padding-top: calc(var(--tracking-large) * 5);
         text-align: center;
-        @media (max-width: 400px) {
-            padding-top: calc(var(--tracking-large) * 3);
-        }
         &:before {
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
             height: 100px;
             top: -99px;
             z-index: 10;
+        }
+        .events-list {
+            margin-bottom: calc(var(--tracking-large) * 4);
         }
     }
 </style>

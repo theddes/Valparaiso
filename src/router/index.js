@@ -13,9 +13,11 @@ const router = new Router({
     linkActiveClass: 'active',
     scrollBehavior (to, from, savedPosition) {
         const {focus} = to.params
-        focus && document.getElementById(focus) && document.getElementById(focus).scrollIntoView({ 
-            behavior: 'smooth' 
-        })
+        setTimeout(() => {
+            focus && document.getElementById(focus) && document.getElementById(focus).scrollIntoView({ 
+                behavior: 'smooth' 
+            })
+        }, 200)
     },
     routes
 })
