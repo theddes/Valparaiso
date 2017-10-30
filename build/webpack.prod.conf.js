@@ -106,7 +106,7 @@ var webpackConfig = merge(baseWebpackConfig, {
             cacheId: 'valparaiso',
             filename: 'service-worker.js',
             staticFileGlobs: ['dist/**/*.{js,html,css,png,jpg,svg}'],
-            minify: true,
+            minify: false,
             stripPrefix: 'dist/'
         })
         // new CriticalPlugin({
