@@ -8,22 +8,37 @@
 
 ### **Staging**
 
-[**valparaiso.surge.sh**](http://valparaiso.surge.sh) will be regularly updated to reflect the latest stage of development! 
+[**valparaiso.surge.sh**](https://valparaiso.surge.sh) will be regularly updated to reflect the latest stage of development! 
 
 ### **NPM commands**
 
+The build command will use [surge](http://surge.sh/) to deploy to staging. You'll need to install it.
+
+Check package.json for additional details and commands that might not be listed here.
+
 ``` bash
 # install dependencies
-npm install
+$ npm install
 
 # serve with hot reload at localhost:8080
-npm run dev
+$ npm run dev
 
 # build and deploy to staging (new developers will first need to be added as collaborator to deploy to staging!)
-npm run build
+$ npm run build
+
+# build locally
+$ npm run build-local
 ```
 
 For detailed explanation on how the Webpack template works, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+### **Service worker and offline caching**
+
+A service worker is generated to cache all assets for offline use. The site is a fully functional Progressive Web App.
+
+### **Lighthouse**
+
+You're recommended to install Google's [Lighthouse](https://github.com/GoogleChrome/lighthouse) for performance auditing. PWA score should always be 100. The rest should score above 80.
 
 ### **Releases / Roadmap**
 
@@ -65,7 +80,7 @@ Adhere to the [official VueJS styleguide](https://vuejs.org/v2/style-guide/)! Pa
 
 > **Image optimization**
 
-Done automatically for all images [`png|jpe?g|gif|svg`] above 5KB.
+Done automatically for all images [`png|jpe?g|gif|svg`].
 
 > **Convert embedded SVG**
 
