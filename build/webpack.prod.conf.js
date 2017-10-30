@@ -1,3 +1,4 @@
+var fs = require('fs')
 var path = require('path')
 var utils = require('./utils')
 var webpack = require('webpack')
@@ -8,10 +9,13 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+var loadMinified = require('./load-minified')
 
 // var CriticalPlugin = require('webpack-plugin-critical').CriticalPlugin
 // var PrerenderSpaPlugin = require('prerender-spa-plugin')
 // var PrerenderRoutes = require('./prerender-routes').routes()
+// var OfflinePlugin = require('offline-plugin')
 
 var env = config.build.env
 
@@ -65,7 +69,8 @@ var webpackConfig = merge(baseWebpackConfig, {
                 // https://github.com/kangax/html-minifier#options-quick-reference
             },
             // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-            chunksSortMode: 'dependency'
+            chunksSortMode: 'dependency',
+            serviceWorkerLoader: `<script>${loadMinified(path.join(__dirname, './service-worker-prod.js'))}</script>`
         }),
         // keep module.id stable when vender modules does not change
         new webpack.HashedModuleIdsPlugin(),
@@ -97,6 +102,13 @@ var webpackConfig = merge(baseWebpackConfig, {
                 ignore: ['.*']
             }
         ]),
+        new SWPrecacheWebpackPlugin({
+            cacheId: 'valparaiso',
+            filename: 'service-worker.js',
+            staticFileGlobs: ['dist/**/*.{js,html,css,png,jpg,svg}'],
+            minify: true,
+            stripPrefix: 'dist/'
+        })
         // new CriticalPlugin({
         //     src: 'index.html',
         //     inline: true,
@@ -108,7 +120,8 @@ var webpackConfig = merge(baseWebpackConfig, {
         //     config.build.assetsRoot,
         //     // List of routes to prerender
         //     PrerenderRoutes
-        // )
+        // ),
+        // new OfflinePlugin()
     ]
 })
 

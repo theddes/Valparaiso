@@ -57,17 +57,37 @@ module.exports = {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loaders: [
                     {
-                        loader: "url-loader",
-                        options: {
-                            limit: 5000
-                        }
-                    },
-                    {
                         loader: "img-loader",
                         options: {
                             name: utils.assetsPath("img/[name].[hash:7].[ext]")
                         }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65
+                            },
+                            // optipng.enabled: false will disable optipng
+                            optipng: {
+                                enabled: true,
+                            },
+                            pngquant: {
+                                quality: '65-90',
+                                speed: 4
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            // webp: {
+                            //     quality: 75
+                            // }
+                        }
                     }
+                    // {
+                    //     loader: require.resolve("./lazy-loader")
+                    // }
                 ]
             },
             {
