@@ -15,9 +15,11 @@ const router = new Router({
         const {focus} = to.params
         setTimeout(() => {
             focus && document.getElementById(focus) && document.getElementById(focus).scrollIntoView({ 
-                behavior: 'smooth' 
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'nearest'
             })
-        }, 200)
+        }, 300)
     },
     routes
 })
