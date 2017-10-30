@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import api from './api'
+import firebase from './firebase'
 
 const config = {
     site: {
@@ -11,7 +12,7 @@ const config = {
         preserve: 3, // days till data is expired
         loadtime: 1500 // ms to show loader regardless of cache status
     },
-    api
+    api, firebase
 }
 
 Vue.mixin({
