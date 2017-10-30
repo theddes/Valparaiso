@@ -13,3 +13,19 @@ Vue.directive('attributes', {
         })
     }
 })
+
+Vue.directive('link', {
+    bind: function (el, binding, vnode) {
+        el.addEventListener('click', event => {
+            event.stopImmediatePropagation()
+            const {url, target} = binding.value
+            if (url.length && target.length) {
+                const open = window.open(url, target)
+                open.focus()
+            } else if (url.length) {
+                // use vue router  
+                window.location = url
+            }
+        })
+    }
+})

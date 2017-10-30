@@ -1,5 +1,5 @@
 <template>
-    <button @click="handleClick">
+    <button>
         <span>{{ label }}</span>
     </button>  
 </template>
@@ -23,17 +23,6 @@
                 required: false,
                 default: ''
             } 
-        },
-        methods: {
-            handleClick () {
-                const {url, target} = this
-                if (url.length && target.length) {
-                    const open = window.open(url, target)
-                    open.focus()
-                } else if (url.length) {
-                    window.location = url
-                }
-            }
         }
     }
 </script>

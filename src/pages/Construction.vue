@@ -1,7 +1,7 @@
 <template>
     <main role="main" id="uc" class="fixed-pseudo fullwidth">
         <section class="float-center">
-            <img v-lazy="require('../assets/images/logo-valparaiso.svg')" class="logo" />
+            <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" />
             <p>
                 We're currently under construction.
             </p>
@@ -10,11 +10,13 @@
 </template>
 
 <script>
-    import ValpoLogo from '@/components/ValpoLogo'
+    import logo from '../assets/images/logo-valparaiso.svg'
 
     export default {
         name: 'Construction',
-        components: { ValpoLogo }
+        data: () => ({
+            images: { logo }
+        })
     }
 </script>
 

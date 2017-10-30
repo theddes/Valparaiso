@@ -8,7 +8,7 @@
         </p>
         <p class="align-center">
             Join us on our journey!<br>
-            <img v-lazy="require('../assets/images/logo-valparaiso.svg')" class="logo" />
+            <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" />
         </p>
         <p class="align-center">
             Partners:
@@ -17,11 +17,13 @@
 </template>
 
 <script>
-    import ValpoLogo from '@/components/ValpoLogo'
+    import logo from '../assets/images/logo-valparaiso.svg'
 
     export default {
         name: 'Footer',
-        components: { ValpoLogo }
+        data: () => ({
+            images: { logo }
+        })
     }
 </script>
 

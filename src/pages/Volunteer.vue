@@ -1,8 +1,8 @@
 <template>
     <main role="main" id="index">
 
-        <valpo-splash class="splash" :video="video" :image="require('../assets/images/image-giuliana.jpg')">
-            <img v-lazy="require('../assets/images/logo-valparaiso.svg')" class="logo" /><br>
+        <valpo-splash class="splash" :video="video" :image="images.giuliana">
+            <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
             ~ we like acid yay ~
         </valpo-splash>
 
@@ -36,64 +36,85 @@
                 </valpo-list-item>
             </valpo-list>
         </valpo-content> 
-        <valpo-content id="form" class="form flex-rows" v-lazy:background-image="require('../assets/images/image-beach.jpg')">
-            <h3>Send us a message</h3>
-            <form>
-                <label for="name">Name</label>
-                <input type="text">
-            </form>
+        <valpo-content id="form" class="form flex-rows fixed-pseudo" v-lazy:background-image="images.beach">
+            <div class="message">
+                <h3>Message in a bottle</h3>
+                <p>
+                    Want to get in touch, have a question or just want to say hi?<br>
+                    We're always on the lookout for new volunteers and ideas!
+                    <br><br>
+                </p>
+                <p>
+                    <valpo-button class="button cerulean" label="Send us an email!"></valpo-button>
+                </p>
+            </div>
         </valpo-content>
     </main>
 </template>
 
 <script>
     import ValpoSplash from '@/components/ValpoSplash'
-    import ValpoLogo from '@/components/ValpoLogo'
     import ValpoContent from '@/components/ValpoContent'
     import ValpoList from '@/components/ValpoList'
     import ValpoListItem from '@/components/ValpoListItem'
+    import ValpoButton from '@/components/ValpoButton'
+
+    import logo from '../assets/images/logo-valparaiso.svg'
+    import giuliana from '../assets/images/image-giuliana.jpg'
+    import beach from '../assets/images/image-beach.jpg'
+
+    import iconBuilding from '../assets/images/icon-building.svg'
+    import iconDesign from '../assets/images/icon-design.svg'
+    import iconVideo from '../assets/images/icon-video.svg'
+    import iconMarketing from '../assets/images/icon-marketing.svg'
+    import iconSocial from '../assets/images/icon-social.svg'
+
+    import light from '../assets/images/image-light.jpg'
+    import qr from '../assets/images/image-qr.jpg'
+    import birds from '../assets/images/image-birds.jpg'
 
     export default {
         name: 'Volunteer',
-        components: { ValpoSplash, ValpoLogo, ValpoContent, ValpoList, ValpoListItem },
+        components: { ValpoSplash, ValpoContent, ValpoList, ValpoListItem, ValpoButton },
         data: () => ({
+            images: { logo, giuliana, beach },
             video: {
                 src: 'https://fat.gfycat.com/HighlevelZestyAxolotl.webm',
                 loop: true
             },
             tasks: [
                 {
-                    icon: require('../assets/images/icon-building.svg'),
+                    icon: iconBuilding,
                     alt: 'Building / Repairing'
                 },
                 {
-                    icon: require('../assets/images/icon-design.svg'),
+                    icon: iconDesign,
                     alt: 'Design'
                 },
                 {
-                    icon: require('../assets/images/icon-video.svg'),
+                    icon: iconVideo,
                     alt: 'Photography / Video'
                 },
                 {
-                    icon: require('../assets/images/icon-marketing.svg'),
+                    icon: iconMarketing,
                     alt: 'Marketing'
                 },
                 {
-                    icon: require('../assets/images/icon-social.svg'),
+                    icon: iconSocial,
                     alt: 'Social Media'
                 }
             ],
             projects: [
                 {
-                    image: require('../assets/images/image-light.jpg'),
+                    image: light,
                     title: 'We\'re upgrading our ship!'
                 },
                 {
-                    image: require('../assets/images/image-qr.jpg'),
+                    image: qr,
                     title: 'The pirate app'
                 },
                 {
-                    image: require('../assets/images/image-birds.jpg'),
+                    image: birds,
                     title: 'Into the Woods festival'
                 }
             ]
@@ -121,7 +142,7 @@
             li {
                 margin: 1.8em 2.5vw;
                 margin-top: calc(var(--tracking-large) * 1);
-                width: 20vw;
+                width: 20%;
                 @media (max-width: 800px) {
                     margin-top: 0;
                 }
@@ -180,5 +201,21 @@
         background-size: cover;
         margin-top: -1px;
         min-height: 80vh;
+        position: relative;
+        .message {
+            bottom: 10%;
+            left: 0;
+            margin: 0 auto;
+            max-width: 1040px;
+            padding: 2em;
+            position: absolute;
+            right: 0;
+            width: 100%;
+        }
+        &:before {
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
+            opacity: 0.5;
+            z-index: 0;
+        }
     }
 </style>

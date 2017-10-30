@@ -1,11 +1,11 @@
 <template>
     <main role="main" id="index">
 
-        <valpo-splash class="splash" :image="require('../assets/images/image-pig.jpg')">
-            <img v-lazy="require('../assets/images/logo-valparaiso.svg')" class="logo" />
+        <valpo-splash class="splash" :image="images.pig">
+            <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" />
         </valpo-splash>
 
-        <valpo-content id="about" class="about flex-rows" v-lazy:background-image="require('../assets/images/graphic-boat.jpg')">
+        <valpo-content id="about" class="about flex-rows" v-lazy:background-image="images.boat">
             <h3>Adventures of the Valparaíso</h3>
             <p>
                 Pirates are typically known for looting, raiding and wrecking wherever they went. However, did you know that pirates were also the revolutionaries, the progressives, the explorers? They challenged the existing authority, sailed away from mainstream society and created their own alternative culture and socio-economic structure.
@@ -17,11 +17,11 @@
                 To us, this is the real essence of piracy: the courage to branch out from established societal norms to explore and create progressive, and exciting pathways.
             </p>
             <p class="cta">
-                <valpo-button class="button cerulean" label="Read more about us ..."></valpo-button>
+                <valpo-button class="button cerulean" label="Read more about us"></valpo-button>
             </p>
         </valpo-content>
 
-        <valpo-content id="involved" class="involved flex-rows fixed-pseudo" v-lazy:background-image="require('../assets/images/image-hand.jpg')">
+        <valpo-content id="involved" class="involved flex-rows fixed-pseudo" v-lazy:background-image="images.hand">
             <valpo-list class="icons flex-around">
                 <valpo-list-item v-for="(item, index) in involved" :key="item.icon">
                     <figure>
@@ -50,28 +50,37 @@
 
 <script>
     import ValpoSplash from '@/components/ValpoSplash'
-    import ValpoLogo from '@/components/ValpoLogo'
     import ValpoContent from '@/components/ValpoContent'
     import ValpoButton from '@/components/ValpoButton'
     import ValpoList from '@/components/ValpoList'
     import ValpoListItem from '@/components/ValpoListItem'
     import ValpoEvents from '@/components/ValpoEvents'
 
+    import logo from '../assets/images/logo-valparaiso.svg'
+    import pig from '../assets/images/image-pig.jpg'
+    import boat from '../assets/images/graphic-boat.jpg'
+    import hand from '../assets/images/image-hand.jpg'
+
+    import iconBoat from '../assets/images/icon-boat.svg'
+    import iconConnect from '../assets/images/icon-connect.svg'
+    import iconGlobe from '../assets/images/icon-globe.svg'
+
     export default {
         name: 'Index',
-        components: { ValpoSplash, ValpoLogo, ValpoContent, ValpoButton, ValpoList, ValpoListItem, ValpoEvents },
+        components: { ValpoSplash, ValpoContent, ValpoButton, ValpoList, ValpoListItem, ValpoEvents },
         data: () => ({
+            images: { logo, pig, boat, hand },
             involved: [
                 {
-                    icon: require('../assets/images/icon-boat.svg'),
+                    icon: iconBoat,
                     alt: 'Help us get our boat'
                 },
                 {
-                    icon: require('../assets/images/icon-connect.svg'),
+                    icon: iconConnect,
                     alt: 'Connect with us'
                 },
                 {
-                    icon: require('../assets/images/icon-globe.svg'),
+                    icon: iconGlobe,
                     alt: 'I dunno, something with a globe'
                 }
             ]
@@ -128,7 +137,7 @@
                 margin-top: calc(var(--tracking-large) * 7);
             }
             li {
-                width: 20vw;
+                width: 20%;
             }
         }
         .cta {
@@ -138,7 +147,7 @@
             }
         }
         &:before {
-            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
+            background: linear-gradient(to bottom, rgba(0, 99, 135,0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
             opacity: 0.5;
             z-index: 0;
         }
@@ -149,7 +158,7 @@
         min-height: 70vh;
         text-align: center;
         &:before {
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
+            background: linear-gradient(to bottom, rgba(0, 99, 135,0) 0%, var(--color-ocean) 81%, var(--color-ocean) 100%);
             height: 100px;
             top: -99px;
             z-index: 10;

@@ -1,6 +1,6 @@
 // todo: add youtube support
 <template>
-    <section class="splash fixed-pseudo flex-container flex-center" v-lazy:background-image="image">
+    <section class="splash fixed-pseudo flex-container flex-center" :style="`backgroundImage: url(${image})`">
         <div class="splash-slot">
             <slot></slot>
         </div>
