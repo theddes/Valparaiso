@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import * as helpers from './helpers'
 import * as filters from './filters'
+import './polyfills'
 
 Object.keys(filters).forEach(key => {
     Vue.filter(key, filters[key])
