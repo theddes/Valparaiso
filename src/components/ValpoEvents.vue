@@ -66,10 +66,6 @@
 <style lang="scss" scoped>
     .events-list {
         margin-top: calc(var(--tracking-large) * 5);
-        // &:hover .event:not(:hover) {
-        //     opacity: 0.8;
-        //     filter: grayscale(80%);
-        // }
         .event {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 3px;

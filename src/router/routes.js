@@ -1,9 +1,8 @@
 import config from '@/config'
 
-import Index from '@/pages/Index'
-import Volunteer from '@/pages/Volunteer'
-
-import Construction from '@/pages/Construction'
+const Index = () => import('@/pages/Index')
+const Volunteer = () => import('@/pages/Volunteer')
+const Construction = () => import('@/pages/Construction')
 
 let routes = [
     {

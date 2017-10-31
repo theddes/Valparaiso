@@ -5,11 +5,8 @@
 </template>
 
 <script>
-    import ValpoLogo from '@/components/ValpoLogo'
-
     export default {
-        name: 'Gateway',
-        components: { ValpoLogo }
+        name: 'Gateway'
     }
 </script>
 

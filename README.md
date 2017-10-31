@@ -3,8 +3,6 @@
  **Initial scaffolding was done by [`vue-CLI`](https://github.com/vuejs/vue-cli) using the [Webpack template](https://github.com/vuejs-templates/webpack)**
 >
 > *Using [runtime-only](https://gist.github.com/anchal20/f2ac9807263e106c1308f7143df1cf09) build of Vue*
->
-> Additional core dependencies added: [`vuex`](https://github.com/vuejs/vuex) (state management), [`axios`](https://github.com/mzabriskie/axios) (http client), [`firebase`](https://www.npmjs.com/package/firebase) (Firebase Javascript SDK), [`vue-touch`](https://github.com/vuejs/vue-touch/tree/next) (Hammer.js wrapper for Vue.js), [`anime-js`](https://github.com/juliangarnier/anime) (JavaScript Animation Engine)
 
 ### **Staging**
 

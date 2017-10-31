@@ -7,7 +7,7 @@ import config from '@/config'
 Vue.use(Router)
 
 const router = new Router({
-    mode: 'history',
+    mode: window.location.host.includes('surge') ? 'hash' : 'history',
     base: __dirname,
     transitionOnLoad: true,
     linkActiveClass: 'active',
