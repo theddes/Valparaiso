@@ -1,6 +1,9 @@
 .button {
     border: 2px solid transparent;
-    border-radius: 3px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius: 15px 255px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     font-family: "Kalam", sans-serif;
     font-size: 1.2em;
@@ -10,16 +13,23 @@
     position: relative;
     letter-spacing: 0.02em;
     transition: all 0.3s ease-out;
+    &:nth-child(2n+2) {
+        border-top-left-radius: 125px 25px;
+        border-top-right-radius: 10px 205px;
+        border-bottom-right-radius: 20px 205px;
+        border-bottom-left-radius: 185px 25px;
+    }
     span {
         position: relative;
         z-index: 5;
     }
 
     &:hover {
-        border-color: transparent !important;
+        box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3) !important;
     }
     &:active, &[disabled="true"] {
-        box-shadow: none !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+        border-color: transparent !important;
         transition: all 0s ease-out;
     }
 
