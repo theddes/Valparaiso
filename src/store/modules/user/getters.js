@@ -1,7 +1,7 @@
 const getters = {
-    isLoggedIn: state => {
-        return !!localStorage.getItem('token')
-    }
-}
+  isLoggedIn: state => {
+    return !!localStorage.getItem("token");
+  }
+};
 
-export default getters
+export default getters;

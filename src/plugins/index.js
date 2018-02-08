@@ -1,5 +1,5 @@
 // import './axios'
 // import './firebase'
 // import './vue-touch'
-import './lazyload'
-import './animejs'
+import "./lazyload";
+import "./animejs";

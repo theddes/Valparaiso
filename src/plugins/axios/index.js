@@ -10,16 +10,16 @@
  * }
  */
 
-import Vue from 'vue'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
 
 // import store from '@store'
-import config from '../../config'
+import config from "../../config";
 
-import './beforeRequest'
-import './beforeResponse'
+import "./beforeRequest";
+import "./beforeResponse";
 
-axios.defaults.baseURL = config.api.base
+axios.defaults.baseURL = config.api.base;
 
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios, axios);

@@ -1,5 +1,5 @@
 const firebase = {
-    enabled: false
-}
+  enabled: false
+};
 
-export default firebase
+export default firebase;

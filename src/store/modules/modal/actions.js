@@ -1,7 +1,7 @@
 const actions = {
-    toggle (context, state) {
-        return context.commit((state) ? 'open' : 'close')
-    }
-}
+  toggle(context, state) {
+    return context.commit(state ? "open" : "close");
+  }
+};
 
-export default actions
+export default actions;

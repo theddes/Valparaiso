@@ -1,5 +1,5 @@
 const state = {
-    open: false
-}
+  open: false
+};
 
-export default state
+export default state;

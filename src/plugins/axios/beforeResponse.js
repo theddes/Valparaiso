@@ -1,6 +1,6 @@
-import axios from 'axios'
+import axios from "axios";
 
 // upon response, before returning data
 axios.interceptors.response.use(response => {
-    return response
-})
+  return response;
+});

@@ -1,6 +1,6 @@
-import axios from 'axios'
+import axios from "axios";
 
 // before api call
 axios.interceptors.request.use(request => {
-    return request
-})
+  return request;
+});

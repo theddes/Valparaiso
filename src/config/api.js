@@ -1,5 +1,5 @@
 const api = {
-    base: ''
-}
+  base: ""
+};
 
-export default api
+export default api;

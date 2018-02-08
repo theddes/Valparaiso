@@ -1,59 +1,62 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Valparaiso">
 
-        <meta name="theme-color" content="#00b1bd"/>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>static/manifest.json">
-        <link rel="icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/favicon.ico">
-        <link rel="apple-touch-icon" sizes="57x57" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/favicon-16x16.png">
-        <meta name="msapplication-TileColor" content="#00b1bd">
-        <meta name="msapplication-TileImage" content="<%= htmlWebpackPlugin.files.publicPath %>static/meta/ms-icon-144x144.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Valparaiso">
 
-        <meta property="og:type"               content="website" />
-        <meta property="og:title"              content="Valparaiso" />
-        <meta name="twitter:title"             content="Valparaiso" />
-        <meta property="og:description"        content="Valparaiso..." />
-        <meta name="twitter:description"       content="Valparaiso..." />
-        <meta property="og:image:width"        content="1055" />
-        <meta property="og:image:height"       content="553" />
-        <meta name="twitter:card"              content="summary_large_image" />
+  <meta name="theme-color" content="#00b1bd" />
 
-        <title>Valparaiso</title>
+  <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>static/manifest.json">
+  <link rel="icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= htmlWebpackPlugin.files.publicPath %>static/meta/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#00b1bd">
+  <meta name="msapplication-TileImage" content="<%= htmlWebpackPlugin.files.publicPath %>static/meta/ms-icon-144x144.png">
 
-        <%
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Valparaiso" />
+  <meta name="twitter:title" content="Valparaiso" />
+  <meta property="og:description" content="Valparaiso..." />
+  <meta name="twitter:description" content="Valparaiso..." />
+  <meta property="og:image:width" content="1055" />
+  <meta property="og:image:height" content="553" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>Valparaiso</title>
+
+  <%
             for (var chunk of webpack.chunks) {
                 for (var file of chunk.files) {
                     if (file.match(/\.(js|css)$/)) { %>
-                        <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
-        <% }}} %>
-    </head>
-    <body>
-        <noscript>
-            No JavaScript, no love..
-        </noscript>
-        <div id="site"></div>
-        <!-- Todo: only include in production -->
-        <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
-        <!-- built files will be auto injected -->
-    </body>
+    <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
+    <% }}} %>
+</head>
+
+<body>
+  <noscript>
+    No JavaScript, no love..
+  </noscript>
+  <div id="site"></div>
+  <!-- Todo: only include in production -->
+  <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
+    <!-- built files will be auto injected -->
+</body>
+
 </html>

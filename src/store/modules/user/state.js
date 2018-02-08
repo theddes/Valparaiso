@@ -1,5 +1,5 @@
 const state = {
-    name: ''
-}
+  name: ""
+};
 
-export default state
+export default state;
